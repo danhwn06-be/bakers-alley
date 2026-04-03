@@ -1,13 +1,15 @@
 <!doctype html>
-<html lang="vi"> <head>
+<html lang="vi">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $title ?? 'Bakers Alley - Hệ Thống Bán Bánh Trực Tuyến' }}</title>
-    
+
     <link href='http://fonts.googleapis.com/css?family=Dosis:300,400' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-    
+
     <link rel="stylesheet" href="{{ asset('assets/dest/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/dest/vendors/colorbox/example3/colorbox.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/dest/rs-plugin/css/settings.css') }}">
@@ -18,6 +20,7 @@
 
     @stack('styles')
 </head>
+
 <body>
 
     <x-layouts.header />
@@ -41,9 +44,9 @@
     <script src="{{ asset('assets/dest/js/custom2.js') }}"></script>
 
     <script>
-        $(document).ready(function($) {    
-            $(window).scroll(function(){
-                if($(this).scrollTop() > 150) {
+        $(document).ready(function($) {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 150) {
                     $(".header-bottom").addClass('fixNav');
                 } else {
                     $(".header-bottom").removeClass('fixNav');
@@ -54,4 +57,5 @@
 
     @stack('scripts')
 </body>
+
 </html>

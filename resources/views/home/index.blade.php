@@ -16,12 +16,11 @@
 									data-oheight="undefined">
 									<div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover"
 										data-bgposition="center center" data-bgrepeat="no-repeat"
-										data-lazydone="undefined" src="assets/dest/images/thumbs/1.jpg"
-										data-src="assets/dest/images/thumbs/1.jpg"
-										style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url('assets/dest/images/thumbs/1.jpg'); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 1; visibility: inherit;">
+										data-lazydone="undefined" src="{{ asset('assets/dest/images/thumbs/1.jpg') }}"
+										data-src="{{ asset('assets/dest/images/thumbs/1.jpg') }}"
+										style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url('{{ asset('assets/dest/images/thumbs/1.jpg') }}'); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 1; visibility: inherit;">
 									</div>
 								</div>
-
 							</li>
 							<li data-transition="boxfade" data-slotamount="20" class="active-revslide"
 								style="width: 100%; height: 100%; overflow: hidden; z-index: 18; visibility: hidden; opacity: 0;">
@@ -101,7 +100,7 @@
 								<div class="col-sm-3">
 									<div class="single-item">
 										<div class="single-item-header">
-											<a href="product.html"><img src="assets/dest/images/products/1.jpg"
+											<a href="{{ route('products.show', 1) }}"><img src="{{ asset('assets/dest/images/products/1.jpg') }}"
 													alt=""></a>
 										</div>
 										<div class="single-item-body">
@@ -111,9 +110,9 @@
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="shopping_cart.html"><i
+											<a class="add-to-cart pull-left" href="#"><i
 													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i
+											<a class="beta-btn primary" href="{{ route('products.show', 1) }}">Details <i
 													class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
@@ -126,7 +125,7 @@
 										</div>
 
 										<div class="single-item-header">
-											<a href="product.html"><img src="assets/dest/images/products/2.jpg"
+											<a href="{{ route('products.show', 2) }}"><img src="{{ asset('assets/dest/images/products/2.jpg') }}"
 													alt=""></a>
 										</div>
 										<div class="single-item-body">
@@ -137,9 +136,9 @@
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="shopping_cart.html"><i
+											<a class="add-to-cart pull-left" href="#"><i
 													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i
+											<a class="beta-btn primary" href="{{ route('products.show', 2) }}">Details <i
 													class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
@@ -148,7 +147,7 @@
 								<div class="col-sm-3">
 									<div class="single-item">
 										<div class="single-item-header">
-											<a href="product.html"><img src="assets/dest/images/products/3.jpg"
+											<a href="{{ route('products.show', 3) }}"><img src="{{ asset('assets/dest/images/products/3.jpg') }}"
 													alt=""></a>
 										</div>
 										<div class="single-item-body">
@@ -158,9 +157,9 @@
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="shopping_cart.html"><i
+											<a class="add-to-cart pull-left" href="#"><i
 													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i
+											<a class="beta-btn primary" href="{{ route('products.show', 3) }}">Details <i
 													class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
@@ -169,7 +168,7 @@
 								<div class="col-sm-3">
 									<div class="single-item">
 										<div class="single-item-header">
-											<a href="product.html"><img src="assets/dest/images/products/3.jpg"
+											<a href="{{ route('products.show', 4) }}"><img src="{{ asset('assets/dest/images/products/3.jpg') }}"
 													alt=""></a>
 										</div>
 										<div class="single-item-body">
@@ -179,9 +178,9 @@
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="shopping_cart.html"><i
+											<a class="add-to-cart pull-left" href="#"><i
 													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i
+											<a class="beta-btn primary" href="{{ route('products.show', 4) }}">Details <i
 													class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
@@ -202,7 +201,7 @@
 								<div class="col-sm-3">
 									<div class="single-item">
 										<div class="single-item-header">
-											<a href="product.html"><img src="assets/dest/images/products/1.jpg"
+											<a href="{{ route('products.show', 1) }}"><img src="{{ asset('assets/dest/images/products/1.jpg') }}"
 													alt=""></a>
 										</div>
 										<div class="single-item-body">
@@ -212,9 +211,9 @@
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="shopping_cart.html"><i
+											<a class="add-to-cart pull-left" href="#"><i
 													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i
+											<a class="beta-btn primary" href="{{ route('products.show', 1) }}">Details <i
 													class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
@@ -227,7 +226,7 @@
 										</div>
 
 										<div class="single-item-header">
-											<a href="product.html"><img src="assets/dest/images/products/2.jpg"
+											<a href="{{ route('products.show', 2) }}"><img src="{{ asset('assets/dest/images/products/2.jpg') }}"
 													alt=""></a>
 										</div>
 										<div class="single-item-body">
@@ -238,9 +237,9 @@
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="shopping_cart.html"><i
+											<a class="add-to-cart pull-left" href="#"><i
 													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i
+											<a class="beta-btn primary" href="{{ route('products.show', 2) }}">Details <i
 													class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
@@ -249,7 +248,7 @@
 								<div class="col-sm-3">
 									<div class="single-item">
 										<div class="single-item-header">
-											<a href="product.html"><img src="assets/dest/images/products/3.jpg"
+											<a href="{{ route('products.show', 3) }}"><img src="{{ asset('assets/dest/images/products/3.jpg') }}"
 													alt=""></a>
 										</div>
 										<div class="single-item-body">
@@ -259,9 +258,9 @@
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="shopping_cart.html"><i
+											<a class="add-to-cart pull-left" href="#"><i
 													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i
+											<a class="beta-btn primary" href="{{ route('products.show', 3) }}">Details <i
 													class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
@@ -270,7 +269,7 @@
 								<div class="col-sm-3">
 									<div class="single-item">
 										<div class="single-item-header">
-											<a href="product.html"><img src="assets/dest/images/products/3.jpg"
+											<a href="{{ route('products.show', 4) }}"><img src="{{ asset('assets/dest/images/products/3.jpg') }}"
 													alt=""></a>
 										</div>
 										<div class="single-item-body">
@@ -280,9 +279,9 @@
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="shopping_cart.html"><i
+											<a class="add-to-cart pull-left" href="#"><i
 													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i
+											<a class="beta-btn primary" href="{{ route('products.show', 4) }}">Details <i
 													class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
@@ -294,7 +293,7 @@
 								<div class="col-sm-3">
 									<div class="single-item">
 										<div class="single-item-header">
-											<a href="product.html"><img src="assets/dest/images/products/1.jpg"
+											<a href="{{ route('products.show', 1) }}"><img src="{{ asset('assets/dest/images/products/1.jpg') }}"
 													alt=""></a>
 										</div>
 										<div class="single-item-body">
@@ -304,9 +303,9 @@
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="shopping_cart.html"><i
+											<a class="add-to-cart pull-left" href="#"><i
 													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i
+											<a class="beta-btn primary" href="{{ route('products.show', 1) }}">Details <i
 													class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
@@ -319,7 +318,7 @@
 										</div>
 
 										<div class="single-item-header">
-											<a href="product.html"><img src="assets/dest/images/products/2.jpg"
+											<a href="{{ route('products.show', 2) }}"><img src="{{ asset('assets/dest/images/products/2.jpg') }}"
 													alt=""></a>
 										</div>
 										<div class="single-item-body">
@@ -330,9 +329,9 @@
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="shopping_cart.html"><i
+											<a class="add-to-cart pull-left" href="#"><i
 													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i
+											<a class="beta-btn primary" href="{{ route('products.show', 2) }}">Details <i
 													class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
@@ -341,7 +340,7 @@
 								<div class="col-sm-3">
 									<div class="single-item">
 										<div class="single-item-header">
-											<a href="product.html"><img src="assets/dest/images/products/3.jpg"
+											<a href="{{ route('products.show', 3) }}"><img src="{{ asset('assets/dest/images/products/3.jpg') }}"
 													alt=""></a>
 										</div>
 										<div class="single-item-body">
@@ -351,9 +350,9 @@
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="shopping_cart.html"><i
+											<a class="add-to-cart pull-left" href="#"><i
 													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i
+											<a class="beta-btn primary" href="{{ route('products.show', 3) }}">Details <i
 													class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
@@ -362,7 +361,7 @@
 								<div class="col-sm-3">
 									<div class="single-item">
 										<div class="single-item-header">
-											<a href="product.html"><img src="assets/dest/images/products/3.jpg"
+											<a href="{{ route('products.show', 4) }}"><img src="{{ asset('assets/dest/images/products/3.jpg') }}"
 													alt=""></a>
 										</div>
 										<div class="single-item-body">
@@ -372,9 +371,9 @@
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="shopping_cart.html"><i
+											<a class="add-to-cart pull-left" href="#"><i
 													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="product.html">Details <i
+											<a class="beta-btn primary" href="{{ route('products.show', 4) }}">Details <i
 													class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
@@ -388,6 +387,6 @@
 
 			</div> <!-- .main-content -->
 		</div> <!-- #content -->
-	</div> 
+	</div>
 
 </x-layouts.app>
