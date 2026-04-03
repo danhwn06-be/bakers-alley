@@ -64,7 +64,9 @@ body {
 }
 
 body {
-    font: 13px/20px "Open Sans", sans-serif;
+    font:
+        13px/20px "Open Sans",
+        sans-serif;
     color: black;
     background: #fff;
     font-weight: 300;
@@ -1045,7 +1047,8 @@ sub {
 @font-face {
     font-family: "star";
     src: url(../fonts/star.eot);
-    src: url(../fonts/star.eot?#iefix) format("embedded-opentype"),
+    src:
+        url(../fonts/star.eot?#iefix) format("embedded-opentype"),
         url(../fonts/star.woff) format("woff"),
         url(../fonts/star.ttf) format("truetype"),
         url(../fonts/star.svg#star) format("svg");
@@ -5606,11 +5609,21 @@ li.box-port-filter {
     -ms-transform: rotateX(0deg);
     -o-transform: rotateX(0deg);
     transform: rotateX(0deg);
-    -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
-    -moz-transition: -moz-transform 0.4s, opacity 0.1s;
-    -mos-transition: -mos-transform 0.4s, opacity 0.1s;
-    -o-transition: -o-transform 0.4s, opacity 0.1s;
-    transition: transform 0.4s, opacity 0.1s;
+    -webkit-transition:
+        -webkit-transform 0.4s,
+        opacity 0.1s;
+    -moz-transition:
+        -moz-transform 0.4s,
+        opacity 0.1s;
+    -mos-transition:
+        -mos-transform 0.4s,
+        opacity 0.1s;
+    -o-transition:
+        -o-transform 0.4s,
+        opacity 0.1s;
+    transition:
+        transform 0.4s,
+        opacity 0.1s;
     -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
     -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
