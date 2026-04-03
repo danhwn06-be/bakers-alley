@@ -4,9 +4,7 @@ use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
-Route::get('/', function () {
-    return view('home.index');
-})->name('home');
+Route::get('/', [PageController::class, 'home'])->name('home');
 
 Route::prefix('products')->name('products.')->group(function () {
     Route::get('/', [ProductController::class, 'index'])->name('index');

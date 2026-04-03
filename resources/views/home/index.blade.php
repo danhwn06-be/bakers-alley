@@ -92,99 +92,48 @@
 						<div class="beta-products-list">
 							<h4>New Products</h4>
 							<div class="beta-products-details">
-								<p class="pull-left">438 styles found</p>
+								<p class="pull-left">Tìm thấy {{ count($newProducts) }} sản phẩm</p>
 								<div class="clearfix"></div>
 							</div>
 
 							<div class="row">
-								<div class="col-sm-3">
+								@foreach($newProducts as $product)
+								<div class="col-sm-3" style="margin-bottom: 20px;">
 									<div class="single-item">
-										<div class="single-item-header">
-											<a href="{{ route('products.show', 1) }}"><img src="{{ asset('assets/dest/images/products/1.jpg') }}"
-													alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Sample Woman Top</p>
-											<p class="single-item-price">
-												<span>$34.55</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="#"><i
-													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{ route('products.show', 1) }}">Details <i
-													class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="ribbon-wrapper">
-											<div class="ribbon sale">Sale</div>
-										</div>
+										
+										@if($product->sale_price)
+										<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
+										@endif
 
 										<div class="single-item-header">
-											<a href="{{ route('products.show', 2) }}"><img src="{{ asset('assets/dest/images/products/2.jpg') }}"
-													alt=""></a>
+											<a href="{{ route('products.show', $product->id) }}">
+												<img src="{{ asset('assets/dest/images/products/' . $product->image) }}" alt="{{ $product->name }}" height="250px">
+											</a>
 										</div>
 										<div class="single-item-body">
-											<p class="single-item-title">Sample Woman Top</p>
+											<p class="single-item-title">{{ $product->name }}</p>
+											
 											<p class="single-item-price">
-												<span class="flash-del">$34.55</span>
-												<span class="flash-sale">$33.55</span>
+												@if($product->sale_price)
+													<span class="flash-del">{{ number_format($product->price) }} đ</span>
+													<span class="flash-sale">{{ number_format($product->sale_price) }} đ</span>
+												@else
+													<span class="flash-sale">{{ number_format($product->price) }} đ</span>
+												@endif
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="#"><i
-													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{ route('products.show', 2) }}">Details <i
-													class="fa fa-chevron-right"></i></a>
+											<a class="add-to-cart pull-left" href="#"><i class="fa fa-shopping-cart"></i></a>
+											<a class="beta-btn primary" href="{{ route('products.show', $product->id) }}">Details <i class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="single-item-header">
-											<a href="{{ route('products.show', 3) }}"><img src="{{ asset('assets/dest/images/products/3.jpg') }}"
-													alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Sample Woman Top</p>
-											<p class="single-item-price">
-												<span>$34.55</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="#"><i
-													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{ route('products.show', 3) }}">Details <i
-													class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="single-item-header">
-											<a href="{{ route('products.show', 4) }}"><img src="{{ asset('assets/dest/images/products/3.jpg') }}"
-													alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Sample Woman Top</p>
-											<p class="single-item-price">
-												<span>$34.55</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="#"><i
-													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{ route('products.show', 4) }}">Details <i
-													class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
+								@endforeach
+							</div>
+							<div class="row">
+								<div class="col-sm-12 text-center" style="margin-top: 20px;">
+									{{ $newProducts->appends(request()->all())->links() }}
 								</div>
 							</div>
 						</div> <!-- .beta-products-list -->
@@ -194,190 +143,40 @@
 						<div class="beta-products-list">
 							<h4>Top Products</h4>
 							<div class="beta-products-details">
-								<p class="pull-left">438 styles found</p>
+								<p class="pull-left">Tìm thấy {{ count($saleProducts) }} sản phẩm</p>
 								<div class="clearfix"></div>
 							</div>
 							<div class="row">
-								<div class="col-sm-3">
+								@foreach($saleProducts as $product)
+								<div class="col-sm-3" style="margin-bottom: 20px;">
 									<div class="single-item">
-										<div class="single-item-header">
-											<a href="{{ route('products.show', 1) }}"><img src="{{ asset('assets/dest/images/products/1.jpg') }}"
-													alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Sample Woman Top</p>
-											<p class="single-item-price">
-												<span>$34.55</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="#"><i
-													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{ route('products.show', 1) }}">Details <i
-													class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="ribbon-wrapper">
-											<div class="ribbon sale">Sale</div>
-										</div>
+										
+										<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
 
 										<div class="single-item-header">
-											<a href="{{ route('products.show', 2) }}"><img src="{{ asset('assets/dest/images/products/2.jpg') }}"
-													alt=""></a>
+											<a href="{{ route('products.show', $product->id) }}">
+												<img src="{{ asset('assets/dest/images/products/' . $product->image) }}" alt="{{ $product->name }}" height="250px">
+											</a>
 										</div>
 										<div class="single-item-body">
-											<p class="single-item-title">Sample Woman Top</p>
+											<p class="single-item-title">{{ $product->name }}</p>
 											<p class="single-item-price">
-												<span class="flash-del">$34.55</span>
-												<span class="flash-sale">$33.55</span>
+												<span class="flash-del">{{ number_format($product->price) }} đ</span>
+												<span class="flash-sale">{{ number_format($product->sale_price) }} đ</span>
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="#"><i
-													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{ route('products.show', 2) }}">Details <i
-													class="fa fa-chevron-right"></i></a>
+											<a class="add-to-cart pull-left" href="#"><i class="fa fa-shopping-cart"></i></a>
+											<a class="beta-btn primary" href="{{ route('products.show', $product->id) }}">Details <i class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="single-item-header">
-											<a href="{{ route('products.show', 3) }}"><img src="{{ asset('assets/dest/images/products/3.jpg') }}"
-													alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Sample Woman Top</p>
-											<p class="single-item-price">
-												<span>$34.55</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="#"><i
-													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{ route('products.show', 3) }}">Details <i
-													class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="single-item-header">
-											<a href="{{ route('products.show', 4) }}"><img src="{{ asset('assets/dest/images/products/3.jpg') }}"
-													alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Sample Woman Top</p>
-											<p class="single-item-price">
-												<span>$34.55</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="#"><i
-													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{ route('products.show', 4) }}">Details <i
-													class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
+								@endforeach
 							</div>
-							<div class="space40">&nbsp;</div>
 							<div class="row">
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="single-item-header">
-											<a href="{{ route('products.show', 1) }}"><img src="{{ asset('assets/dest/images/products/1.jpg') }}"
-													alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Sample Woman Top</p>
-											<p class="single-item-price">
-												<span>$34.55</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="#"><i
-													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{ route('products.show', 1) }}">Details <i
-													class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="ribbon-wrapper">
-											<div class="ribbon sale">Sale</div>
-										</div>
-
-										<div class="single-item-header">
-											<a href="{{ route('products.show', 2) }}"><img src="{{ asset('assets/dest/images/products/2.jpg') }}"
-													alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Sample Woman Top</p>
-											<p class="single-item-price">
-												<span class="flash-del">$34.55</span>
-												<span class="flash-sale">$33.55</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="#"><i
-													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{ route('products.show', 2) }}">Details <i
-													class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="single-item-header">
-											<a href="{{ route('products.show', 3) }}"><img src="{{ asset('assets/dest/images/products/3.jpg') }}"
-													alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Sample Woman Top</p>
-											<p class="single-item-price">
-												<span>$34.55</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="#"><i
-													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{ route('products.show', 3) }}">Details <i
-													class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="single-item">
-										<div class="single-item-header">
-											<a href="{{ route('products.show', 4) }}"><img src="{{ asset('assets/dest/images/products/3.jpg') }}"
-													alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">Sample Woman Top</p>
-											<p class="single-item-price">
-												<span>$34.55</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="#"><i
-													class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{ route('products.show', 4) }}">Details <i
-													class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
+								<div class="col-sm-12 text-center" style="margin-top: 20px;">
+									{{ $saleProducts->appends(request()->all())->links() }}
 								</div>
 							</div>
 						</div> <!-- .beta-products-list -->
