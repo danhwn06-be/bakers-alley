@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Slide;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -28,7 +29,7 @@ class DatabaseSeeder extends Seeder
         }
 
 
-        
+
         $rawProducts = [
             [1, 'Bánh Crepe Sầu riêng', 5, '', 150000, 120000, '1430967449-pancake-sau-rieng-6.jpg', 'hộp'],
             [2, 'Bánh Crepe Chocolate', 6, '', 180000, 160000, 'crepe-chocolate.jpg', 'hộp'],
@@ -101,11 +102,28 @@ class DatabaseSeeder extends Seeder
                 'description' => $item[3],
                 'price' => $item[4],
                 // Logic: Chỉ set sale_price nếu giá khuyến mãi thực sự RẺ HƠN giá gốc
-                'sale_price' => $item[5] < $item[4] ? $item[5] : null, 
+                'sale_price' => $item[5] < $item[4] ? $item[5] : null,
                 'image' => $item[6],
                 'unit' => $item[7],
                 // Logic: Cứ mỗi 3 sản phẩm thì tự động đánh dấu 1 cái là Sản phẩm mới (để test trang chủ)
                 'is_new' => ($item[0] % 3 === 0) ? true : false,
+            ]);
+        }
+
+
+
+        $rawSlides = [
+            [1, '', 'banner1.jpg'],
+            [2, '', 'banner2.jpg'],
+            [3, '', 'banner3.jpg'],
+            [4, '', 'banner4.jpg'],
+        ];
+
+        foreach ($rawSlides as $item) {
+            Slide::create([
+                'id' => $item[0],
+                'link' => $item[1],
+                'image' => $item[2],
             ]);
         }
     }
